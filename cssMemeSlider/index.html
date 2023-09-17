@@ -11,58 +11,111 @@
 		<title>Css Meme Slider</title>
 	</head>
 	<body>
-		<div class="conteiner-for-memes">
-			<div class="galery-for-memes">
-				<ul>
-					<li><img class="slide bg1" src="img/xomyak.jpg" alt="in any unclear situation (hamster)"></li>
-					<li><img class="slide bg2" src="img/pecel.jpg" alt="face of the face (dog)"></li>
-					<li><img class="slide bg3" src="img/mish.jpg" alt="cute mouse"></li>
-					<li><img class="slide bg4" src="img/pecel2.jpg" alt="when you work work (dog)"></li>
-					<li><img class="slide bg5" src="img/kit.jpg" alt="ready to be indignant (kat)"></li>
-				</ul>
+			<div class="center">
+			  <div class="carousel-wrapper">
+			    <!-- abstract radio buttons for slides -->
+				<input id="pic1" type="radio" name="controls" checked="checked" />
+			    <input id="pic2" type="radio" name="controls" />
+			    <input id="pic3" type="radio" name="controls" />
+			    <input id="pic4" type="radio" name="controls" />
+			    <input id="pic5" type="radio" name="controls" />
 
+			    <!-- navigation dots -->
+			    <label for="pic1" class="control"><div class="visual-button"></div></label>
+			    <label for="pic2" class="control"><div class="visual-button"></div></label>
+			    <label for="pic3" class="control"><div class="visual-button"></div></label>
+			    <label for="pic4" class="control"><div class="visual-button"></div></label>
+			    <label for="pic5" class="control"><div class="visual-button"></div></label>
+
+			    <div class="carousel">
+			      <ul>
+			        <li>
+			          <img src="img/xomyak.jpg" />
+			        </li>
+			        <li>
+			          <img src="img/pecel.jpg" alt="">
+			        </li>
+			        <li>
+			          <img src="img/mish.jpg" />
+			        </li>
+			        <li>
+			          <img src="img/pecel2.jpg">
+			        </li>
+			        <li>
+			          <img src="img/kit.jpg" alt="">
+			        </li>
+			      </ul>
+			    </div>
+			  </div>
 			</div>
-			<div class="footer-of-meme-conteiner">
-				<div class="container-for-radio-button">
+<!-- 		<div class="conteiner-for-memes">
+			<div class="wraper-of-galery">
+				<div class="galery-for-memes">
+					<ul>
+						<li><img class="slide bg1" src="img/xomyak.jpg" alt="in any unclear situation (hamster)"></li>
+						<li><img class="slide bg2" src="img/pecel.jpg" alt="face of the face (dog)"></li>
+						<li><img class="slide bg3" src="img/mish.jpg" alt="cute mouse"></li>
+						<li><img class="slide bg4" src="img/pecel2.jpg" alt="when you work work (dog)"></li>
+						<li><img class="slide bg5" src="img/kit.jpg" alt="ready to be indignant (kat)"></li>
+					</ul>
+				</div>
+				<input id="slide1" type="radio" name="controls" checked="checked" />
+				<input id="slide2" type="radio" name="controls" />
+				<input id="slide3" type="radio" name="controls" />
+				<input id="slide4" type="radio" name="controls" />
+				<input id="slide5" type="radio" name="controls" /> -->
 
-						<input type="radio" id="pic1" name="slider" checked autofocus>
-						<label for="control1">
+				<!-- navigation dots -->
+<!-- 				<label for="slide1" class="nav-dot"></label>
+				<label for="slide2" class="nav-dot"></label>
+				<label for="slide3" class="nav-dot"></label>
+				<label for="slide4" class="nav-dot"></label>
+				<label for="slide5" class="nav-dot"></label>
+			</div>
+			
+			<div class="footer-of-meme-conteiner"> -->
+<!-- 				<div class="captions-for-pictures">
+					<ul>
+						<li><p>in any unclear situation</p></li>
+						<li><p>face of the face</p></li>
+						<li><p>cute mouse</p></li>
+						<li><p>when you work work</p></li>
+						<li><p>ready to be indignant</p></li>
+					</ul>
+				</div> -->
+				
+<!-- 				<div class="container-for-radio-button">
+						<input type="radio" id="slide1" name="slider" checked autofocus>
+						<label for="slide1" class="nav-dot">
 							<div class="visual-button"></div>
 						</label>	
 
-						
-
-						<input type="radio" id="pic2" name="slider">
-						<label for="control2">
+						<input type="radio" id="slide2" name="slider">
+						<label for="slide2" class="nav-dot">
 							<div class="visual-button"></div>
 						</label>
 
-
-
-						<input type="radio" id="pic3" name="slider">
-						<label for="control3">
+						<input type="radio" id="slide3" name="slider">
+						<label for="slide3" class="nav-dot">
 							<div class="visual-button"></div>
 						</label>
 
-
-
-						<input type="radio" id="pic4" name="slider">
-						<label for="control4">
+						<input type="radio" id="slide4" name="slider">
+						<label for="slide4" class="nav-dot">
 							<div class="visual-button"></div>
 						</label>	
 		
-
-			 			<input type="radio" id="pic5" name="slider">
-						<label for="control5">
+			 			<input type="radio" id="slide5" name="slider">
+						<label for="slide5" class="nav-dot">
 							<div class="visual-button"></div>
 						</label>
 	
-				</div>
-			</div>
+				</div> -->
+<!-- 			</div>
 			
 			
 			
-		</div>
+		</div> -->
 
 	</body>
 

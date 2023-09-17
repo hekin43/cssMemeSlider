@@ -1,26 +1,209 @@
-body, html {
+html,
+body {
+  color: white;
+  background-color: #1e1e23;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+}
+.carousel li img, .carousel li, .carousel {
+  width: 100%;
+}
+
+.carousel-wrapper, .center, .carousel ul {
+  display: flex;
+}
+
+.center, .carousel ul {
+  align-items: center;
+  justify-content: center;
+}
+.carousel-wrapper {
+  position: relative;
+  max-width: 600px;
+  margin: 50px;
+}
+.carousel-wrapper input {
+  display: none;
+}
+
+.carousel {
+  overflow: hidden;
+  border-radius: 15px;
+}
+.carousel ul {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 500%;
+  transition: left 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.carousel li img {
+  border-radius: 15px;
+}
+
+.control {
+  position: absolute;
+  cursor: pointer;
+  margin-left: -7.5px;
+  bottom: -22.5px;
+  width: 1.8em;
+  height: 1.8em;
+  opacity: 0.5;
+  border-radius: 50%;
+  transition: 0.4s;
+  box-sizing: border-box;
+  z-index: 2;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+.visual-button{
+  border-radius: 50%;
+  width: 0.9em;
+  height: 0.9em;
+  cursor: pointer;
+  transition-duration: .2s;
+  background-color: skyblue;
+  box-sizing: border-box;
+
+}
+
+/*  наведение на кнопки*/
+.control:hover >.visual-button{
+  background-color: white;
+}
+input:checked + .control:hover >.visual-button{
+  border: solid 2px white;
+  background-color: #0C0C0E;
+}
+input:checked + .control >.visual-button{
+  border: solid 2px skyblue;
+  background-color: #0C0C0E;
+}
+
+.control[for=pic1] {
+  left: 40%;
+}
+
+#pic1:checked ~ .carousel ul {
+  left: 0%;
+}
+#pic1:checked ~ .control[for=pic1] {
+  opacity: 1;
+}
+
+.control[for=pic2] {
+  left: 45%;
+}
+
+#pic2:checked ~ .carousel ul {
+  left: -100%;
+}
+#pic2:checked ~ .control[for=pic2] {
+  opacity: 1;
+}
+
+.control[for=pic3] {
+  left: 50%;
+}
+
+#pic3:checked ~ .carousel ul {
+  left: -200%;
+}
+#pic3:checked ~ .control[for=pic3] {
+  opacity: 1;
+}
+
+.control[for=pic4] {
+  left: 55%;
+}
+
+#pic4:checked ~ .carousel ul {
+  left: -300%;
+}
+#pic4:checked ~ .control[for=pic4] {
+  opacity: 1;
+}
+
+.control[for=pic5] {
+  left: 60%;
+}
+
+#pic5:checked ~ .carousel ul {
+  left: -400%;
+}
+#pic5:checked ~ .control[for=pic5] {
+  opacity: 1;
+}
+
+/*body, html {
   padding: 0;
   margin: 0;
   text-align: center;
   background-color: #0C0C0E;
 }
-.conteiner-for-memes{
+.galery-for-memes li img, .galery-for-memes li, .galery-for-memes {
+  width: 100%;
+}
+.wraper-of-galery, .conteiner-for-memes, .galery-for-memes ul {
+  display: flex;
+}
+.conteiner-for-memes, .galery-for-memes ul {
+  align-items: center;
+  justify-content: center;
+}
+.wraper-of-galery{
+  position: relative;
+  max-width: 35em;
+  margin: 3em;
+}*/
+/*.conteiner-for-memes{
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 100%;
-  margin: 1em;
+}*/
+/*.galery-for-memes{
+  overflow: hidden;
+  border-radius: 15px;*/
+/*  flex-direction: row;
+  justify-content: center;
+  align-items: center;*/
 }
-.galery-for-memes{
+/*.captions-for-pictures{
   display: flex;
+  width: 30em;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
+.captions-for-pictures ul{
+  display: inline-flex;
+  position: sticky;
+  list-style: none;
+  overflow: hidden;
+  padding: 0;
+  height: 100%;
+  width: 500%;
+  transition: left 0.8s cubic-bezier(0.77, 0, 0.175, 1);  
+
+  color: #FFF;
+  font-family: Forum;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;  letter-spacing: 0.6px;
+  margin: 0;
+}*/
+/*p{
+  margin: 0;
+}
 .footer-of-meme-conteiner{
   display: flex;
+  width: 50em;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
 }
 .container-for-radio-button{
@@ -28,32 +211,45 @@ body, html {
   flex-direction: row;
 }
 .visual-button{
-  border-radius: 48%;
+  border-radius: 50%;
   width: 0.9em;
   height: 0.9em;
   cursor: pointer;
   transition-duration: .2s;
   background-color: skyblue;
   box-sizing: border-box;
-}
-input {
-  position: static;  
-  opacity: 0;
-  cursor: pointer;
+}*/
+/*.wraper-of-galery input {
   display: none;
-}
-label {
-  display: flex;
+}*/
+/*.nav-dot {*/
+/*  display: flex;
   width: 1.8em;
   height: 1.8em;
   box-sizing: border-box;
   z-index: 2;
   cursor: pointer;
   justify-content: center;
-  align-items: center;  
+  align-items: center; */ 
+
+
+/*  position: absolute;
+  cursor: pointer;
+  margin-left: -7.5px;
+  bottom: -22.5px;
+  width: 15px;
+  height: 15px;
+  opacity: 0.5;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
 }
+.nav-dot:hover{
+  opacity: 0.8;
+}*/
+
 /*  наведение на кнопки*/
-label:hover >.visual-button{
+/*label:hover >.visual-button{
   background-color: white;
 }
 input:checked + label:hover >.visual-button{
@@ -63,16 +259,16 @@ input:checked + label:hover >.visual-button{
 input:checked + label >.visual-button{
   border: solid 2px skyblue;
   background-color: #0C0C0E;
-}
+}*/
 
-.slide {
-  position: static;
+/*.slide {
+  position: relative;
   width: 30em;
   margin: auto;
-/*  transform: translateX(-100%);*/
-  transition-duration: .4s;
+*//*  transform: translateX(-100%);*/
+/*  transition-duration: .4s;
   opacity: 1;
-}
+}*/
 /*
 input:checked ~ .slide {
   transform: translateX(100%);
@@ -82,18 +278,9 @@ input:checked + label + .slide {
   transform: translateX(0);
   opacity: 1;
 }*/
-.conteiner-for-memes, .galery-for-memes ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;  
-  overflow: hidden;
-}
-/*.galery-for-memes {
-  overflow: hidden;
-  border-radius: 5px;
-}*/
-.galery-for-memes ul {
-  position: sticky;
+
+/*.galery-for-memes ul {
+  position: relative;
   list-style: none;
   overflow: hidden;
   margin: 0;
@@ -104,4 +291,143 @@ input:checked + label + .slide {
 }
 .galery-for-memes li img {
   border-radius: 15px;
+}*/
+/*.controls{
+  display: flex;
+  width: 1.8em;
+  height: 1.8em;
+  box-sizing: border-box;
+  z-index: 2;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;  
 }
+*/
+/*.nav-dot[for=pic1] {
+  left: 40%;
+}
+
+#pic1:checked ~ .galery-for-memes ul {
+  left: 0%;
+}
+#pic1:checked ~ .nav-dot[for=pic1] {
+  opacity: 1;
+}
+
+.nav-dot[for=pic2] {
+  left: 45%;
+}
+
+#pic2:checked ~ .galery-for-memes ul {
+  left: -100%;
+}
+#pic2:checked ~ .nav-dot[for=pic2] {
+  opacity: 1;
+}
+
+.nav-dot[for=pic3] {
+  left: 50%;
+}
+
+#pic3:checked ~ .galery-for-memes ul {
+  left: -200%;
+}
+#pic3:checked ~ .nav-dot[for=pic3] {
+  opacity: 1;
+}
+
+.label[for=pic4] {
+  left: 55%;
+}
+
+#pic4:checked ~ .galery-for-memes ul {
+  left: -300%;
+}
+#pic4:checked ~ .nav-dot[for=pic4] {
+  opacity: 1;
+}
+
+.nav-dot[for=pic5] {
+  left: 60%;
+}
+
+#pic5:checked ~ .galery-for-memes ul {
+  left: -400%;
+}
+#pic5:checked ~ .nav-dot[for=pic5] {
+  opacity: 1;
+}*/
+/*.nav-dot[for=slide1] {
+  left: 40%;
+}
+
+#slide1:checked ~ .galery-for-memes ul {
+  left: 0%;
+}
+#slide1:checked ~ .nav-dot[for=slide1] {
+  opacity: 1;
+}
+
+.nav-dot[for=slide2] {
+  left: 45%;
+}
+
+#slide2:checked ~ .galery-for-memes ul {
+  left: -100%;
+}
+#slide2:checked ~ .nav-dot[for=slide2] {
+  opacity: 1;
+}
+
+.nav-dot[for=slide3] {
+  left: 50%;
+}
+
+#slide3:checked ~ .galery-for-memes ul {
+  left: -200%;
+}
+#slide3:checked ~ .nav-dot[for=slide3] {
+  opacity: 1;
+}
+
+.nav-dot[for=slide4] {
+  left: 55%;
+}
+
+#slide4:checked ~ .galery-for-memes ul {
+  left: -300%;
+}
+#slide4:checked ~ .nav-dot[for=slide4] {
+  opacity: 1;
+}
+
+.nav-dot[for=slide5] {
+  left: 60%;
+}
+
+#slide5:checked ~ .galery-for-memes ul {
+  left: -400%;
+}
+#slide5:checked ~ .nav-dot[for=slide5] {
+  opacity: 1;
+}*/
+
+/*#pic1:checked , #pic1:checked  {
+  display: block;
+}
+
+#pic2:checked ~ .left-arrow[for=pic1], #pic2:checked ~ .right-arrow[for=pic3] {
+  display: block;
+}
+
+#pic3:checked ~ .left-arrow[for=pic2], #pic3:checked ~ .right-arrow[for=pic4] {
+  display: block;
+}
+
+#pic4:checked ~ .left-arrow[for=pic3], #pic4:checked ~ .right-arrow[for=pic5] {
+  display: block;
+}
+
+#pic5:checked ~ .left-arrow[for=pic4], #pic5:checked ~ .right-arrow[for=pic1] {
+  display: block;
+}*/
